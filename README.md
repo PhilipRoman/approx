@@ -14,7 +14,7 @@ code will calculate the distance between `(0, 0)` and the object after `t` secon
 local t = input("t", 60, 0.01)
 local x = input("x0", 0, 0.1) + input("vx0", 5, 0.5)*t + input("a", 3, 0.5)*t^2/2
 local y = input("y0", 10, 0.1) + input("vy0", 5, 0.5)*t + input("g", -9.8, 0.1)*t^2/2
-local length = vsqrt(x^2 + y^2)
+local length = vsqrt(x^2 + y^2) -- vsqrt is sqrt for values with error
 ```
 The error and value of `length` can be accessed using `length.val` and `length.err`. Each of these values are
 tables containing the result `val` and textual expression `name`.
